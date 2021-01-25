@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <!-- Action is where the form is submitted to (i.e. process.php) -->
+  <form action="">
+
+    <!-- for needs to match id of input. Clicking on label will highlight the input. name="name" allows server to grab the value / value attribute will add a default value to input / placeholder will make transparent text-->
+    <div>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" value="John Doe">
+    </div>
+
+    <!-- email will only allow email inputs -->
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" placeholder="I am transparent">
+    </div>
+
+    <!-- Creates a large input area -->
+    <div>
+      <label for="message">Message</label><br>
+      <textarea name="message" id="message" cols="50" rows="5"></textarea>
+    </div>
+
+    <!-- Creates drop down menu / selected attribute will load page with option as 1st option -->
+    <div>
+      <label for="sex">Sex</label>
+      <select name="sex" id="sex">
+        <option value="male" selected>Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <!-- Only allows number inputs / good for obtaining age -->
+    <div>
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+
+    <!-- Makes user select a certain date and allows calendar -->
+    <div>
+      <label for="birthdate">Birthdate</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+
+    <!-- Creates a choice list / adding checked attribute will load page with option selected -->
+    <div>
+      <label for="membership">Membership</label>
+      <input type="radio" name="membership" value="simple" id="membership"> Simple
+      <input type="radio" name="membership" value="standard" id="membership" checked> Standard
+      <input type="radio" name="membership" value="super" id="membership"> Super
+    </div>
+
+    <!-- Checkbox / attribute checked can be used here -->
+    <div>
+      <label for="membership">I like...</label>
+      <input type="checkbox" name="likes" value="bike" id="likes"> Bike
+      <input type="checkbox" name="likes" value="car" id="likes"> Car
+      <input type="checkbox" name="likes" value="boat" id="likes"> Boat
+    </div>
+
+    <!-- Submit button -->
+    <input type="submit" value="submit">
+
+    <!-- Same result as submit button but resets the form -->
+    <button type="reset">Reset</button>
+    
+  </form>
+</body>
+</html>
